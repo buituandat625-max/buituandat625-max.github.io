@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <title>Nhacnen.html - Premium Lyrics Player</title>
+    <style type="text/css">
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: radial-gradient(circle, #2c3e50, #000000);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: white;
+        }
+
+        /* Khung chứa lớn chia 2 phần */
+        .player-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 25px;
+            border-radius: 20px;
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+            display: flex;
+            flex-direction: row;
+            gap: 25px;
+            width: 95%;
+            max-width: 1100px;
+        }
+
+        /* Bên trái: Video */
+        .video-section {
+            flex: 1.6;
+            text-align: center;
+        }
+
+        /* Bên phải: Lời bài hát */
+        .lyrics-section {
+            flex: 1;
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 12px;
+            padding: 20px;
+            height: 450px; /* Khớp với chiều cao video */
+            overflow-y: auto;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: left;
+        }
+
+        /* Tùy chỉnh thanh cuộn Neon */
+        .lyrics-section::-webkit-scrollbar { width: 5px; }
+        .lyrics-section::-webkit-scrollbar-thumb {
+            background: #00d2ff;
+            border-radius: 10px;
+        }
+
+        h2 {
+            margin-top: 0;
+            font-size: 1.1em;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #00d2ff;
+            text-shadow: 0 0 10px rgba(0, 210, 255, 0.5);
+        }
+
+        .version-title {
+            color: #ffca28;
+            font-weight: bold;
+            margin-top: 20px;
+            display: block;
+            border-left: 3px solid #ffca28;
+            padding-left: 10px;
+        }
+
+        video {
+            width: 100%;
+            border-radius: 12px;
+            border: 1px solid #444;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+        }
+
+        .lyrics-content {
+            font-size: 0.9em;
+            line-height: 1.8;
+            color: #bdc3c7;
+        }
+
+        .lyrics-content p {
+            margin: 10px 0;
+            transition: 0.3s;
+        }
+
+        .lyrics-content p:hover {
+            color: #00d2ff;
+            transform: translateX(5px);
+        }
+
+        .info {
+            margin-top: 15px;
+            font-size: 0.85em;
+            color: #888;
+        }
+
+        @media (max-width: 900px) {
+            .player-card { flex-direction: column; }
+            .lyrics-section { height: 300px; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="player-card">
+        
+        <div class="video-section">
+            <h2>Design By Bui Tuan Dat - Genimi</h2>
+            <video controls autoplay loop muted>
+                <source src="../Video/videoplayback.mp4" type="video/mp4">
+                Trình duyệt không hỗ trợ thẻ video.
+            </video>
+            <div class="info">
+                <p><b>Đang phát:</b> Nấu Ăn Cho Em - Đen ft. PiaLinh</p>
+            </div>
+        </div>
+
+        <div class="lyrics-section">
+            <h2>Lyrics</h2>
+            <div class="lyrics-content">
+                
+                <span class="version-title">Version 1</span>
+                <p>Kìa mây mây ngang đầu<br>
+                Kìa núi núi lô nhô<br>
+                Cùng em trên con đường<br>
+                Đường bé xíu quanh co<br>
+                Băng qua những ngọn đồi<br>
+                Thấy em nghiêng nghiêng cười trong đôi mắt tròn<br>
+                Và thế giới cũng nghiêng theo đôi bàn chân em</p>
+
+                <p><b>Rap:</b><br>
+                Mấy đứa trẻ đi lên trường, đội trên đầu là đóa mây trắng<br>
+                Chân đạp lên mặt trời, môi thì cười và má hây nắng<br>
+                Những nụ cười làm cho lòng đang bộn bề bỗng hóa ngay ngắn<br>
+                Lên trên này thấy các em, anh mới thấy mình quá may mắn<br>
+                Mặt trời vàng như trứng chiên<br>
+                Khi mà em đứng thẳng, núi và đồi phải đứng nghiêng<br>
+                Con đường quanh co quá, em chao lượn như cánh chim<br>
+                Mai sau lớn em bơi giữa đời, em bơi khỏe như Ánh Viên<br>
+                Dù không còn là học sinh, anh thấy mình vẫn còn phải học hành<br>
+                Như cây mọc lên từ đất, phải đủ chất thì nó mới mọc cành<br>
+                Học cách bón thêm hạnh phúc, để cành đó mọc ra những điều lành<br>
+                Vì anh nghĩ Số Phận là người luôn giám sát chứ không có điều hành<br>
+                Nên anh mong các em sẽ không bao giờ bỏ cuộc<br>
+                Vì anh biết tụi em nhỏ con những mà dũng khí thì không thể nào nhỏ được<br>
+                Yo, không thể mà nào nhỏ được!</p>
+
+                <span class="version-title">Version 2</span>
+                <p>Kìa mây mây ngang đầu<br>
+                Kià núi núi lô nhô<br>
+                Cùng em trên con đường,<br>
+                Đường bé xíu quanh co<br>
+                Băng qua những ngọn đồi<br>
+                Thấy em nghiêng nghiêng cười trong đôi mắt tròn<br>
+                Và thế giới cũng nghiêng theo đôi bàn chân em</p>
+
+                <p><b>Rap:</b><br>
+                Nấu cho các em ăn dù anh không là đầu bếp giỏi<br>
+                Cũng là cách anh giúp chính mình, bớt nghĩ suy cho đầu hết mỏi<br>
+                Anh muốn thấy những vị khách nhỏ, ăn hết sạch những đồ ngon thơm<br>
+                Vì anh biết những đứa trẻ này, mai này sẽ xây dựng quê hương<br>
+                Nấu cho các em ăn, em lấy sức nhặt từng con chữ<br>
+                Khi có tri thức em thấy con hổ không còn hung dữ<br>
+                Và em sẽ lớn hơn cây mận ở bên vườn nhà<br>
+                Lúc ấy thì mấy khe sâu chỉ là nét vẽ thêm rườm rà<br>
+                Tụi mình muốn trở thành người tốt và đang phải học hỏi để làm điều đó<br>
+                Tụi mình nhìn các em để biết, những gì mình cần những gì mình có<br>
+                Tụi mình cũng từng là trẻ thơ, cần được no cái bụng về chiều<br>
+                Tụi mình tập tìm cách cho đi và biết cho đi nhiều sẽ nhận về nhiều<br>
+                Vì cho đi những nụ cười, những muộn phiền sẽ trôi rất xa<br>
+                Cho đi niềm hạnh phúc sẽ nhận về gấp đôi gấp ba<br>
+                Cho đi niềm hạnh phúc sẽ nhận về gấp đôi gấp ba (gấp đôi gấp ba)</p>
+
+                <span class="version-title">Version 3</span>
+                <p>Trong đôi mắt đó em thấy bầu trời, em thấy núi đồi mặt hồ trong veo<br>
+                Mong chân sẽ cứng và đá luôn mềm trên mỗi con đường từng ngày em qua<br>
+                Mặt trời trong trái tim hồng, vang trong lòng một tiếng gà trưa<br>
+                Mong cho cây lá lên mầm, mong cho trời thuận gió hòa mưa</p>
+
+                <p>Kìa mây mây ngang đầu<br>
+                Kià núi núi lô nhô<br>
+                Cùng em trên con đường,<br>
+                Đường bé xíu quanh co<br>
+                Băng qua những ngọn đồi,<br>
+                Thấy em nghiêng nghiêng cười trong đôi mắt tròn<br>
+                Và thế giới cũng nghiêng theo đôi bàn chân em</p>
+
+                <p><b>Rap:</b><br>
+                Ở dưới xuôi chúng mình gọi view này là view triệu đô, vậy thì ai mới là người dư dả?<br>
+                Chúng mình làm và làm và làm, cũng chỉ để mong có ngày được thư thả<br>
+                Và khi xem lại những hình ảnh này, những áp lực chợt biến tan<br>
+                Những nụ cười mát như nước giếng khoan<br>
+                Và những đôi mắt trong như ngọn nguồn ánh sáng<br>
+                Chúng mình đều phải học cách để tốt lên qua ngày qua tháng<br>
+                Lúc ban đầu thì chả ai tốt ngay được vì chả biết phải làm sao<br>
+                Thế là nhìn những người tốt quanh mình xem họ làm gì và làm theo<br>
+                Và người tốt thì ngoài kia nhiều lắm...</p>
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
